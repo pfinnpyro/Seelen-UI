@@ -1,22 +1,13 @@
 import { invoke, SeelenCommand } from "@seelen-ui/lib";
 import { SeelenWegSide, type UserAppWindow, WegMiddleClickAction } from "@seelen-ui/lib/types";
 import { FileIcon } from "libs/ui/react/components/Icon/index.tsx";
-import { useWindowFocusChange } from "libs/ui/react/utils/hooks.ts";
 import { cx } from "libs/ui/react/utils/styling.ts";
-import moment from "moment";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 
 import type { AppOrFileWegItem } from "../../shared/types.ts";
 
-import {
-  $delayedFocused,
-  $focused,
-  $interactables,
-  $notifications,
-  $open_popups,
-  $settings,
-} from "../../shared/state/mod.ts";
+import { $delayedFocused, $focused, $interactables, $notifications, $settings } from "../../shared/state/mod.ts";
 import { getDockContextMenuAlignment } from "../../shared/state/settings.ts";
 import { getWindowsForItem } from "../../shared/state/windows.ts";
 import { getUserApplicationContextMenu, launchItem } from "./UserApplicationContextMenu.tsx";
@@ -33,9 +24,6 @@ interface InnerProps extends Props {
 }
 
 function UserApplicationItem({ item, isOverlay, windows }: InnerProps) {
-  const [openPreview, setOpenPreview] = useState(false);
-  const [blockUntil, setBlockUntil] = useState(moment(new Date()));
-
   const { t } = useTranslation();
   const calculatePlacement = (position: any) => {
     switch (position) {
@@ -57,17 +45,9 @@ function UserApplicationItem({ item, isOverlay, windows }: InnerProps) {
     }
   };
 
-  useWindowFocusChange((focused) => {
-    if (!focused) {
-      setBlockUntil(moment(new Date()).add(1, "second"));
-      setOpenPreview(false);
-    }
-  });
-
   const onContextMenu = useCallback(
     (e: MouseEvent) => {
       e.stopPropagation();
-      setOpenPreview(false);
       const { alignX, alignY } = getDockContextMenuAlignment($settings.value.position);
       invoke(SeelenCommand.TriggerContextMenu, {
         menu: { ...getUserApplicationContextMenu(t, item, windows), alignX, alignY },
@@ -128,20 +108,16 @@ function UserApplicationItem({ item, isOverlay, windows }: InnerProps) {
     </div>
   );
 
-  if (isOverlay) {
+  if (isOverlay || windows.length === 0) {
     return itemNode;
   }
 
   return (
     <Popover
-      open={openPreview && !!windows.length}
       placement={calculatePlacement($settings.value.position)}
-      onOpenChange={(open) => {
-        setOpenPreview(open && moment(new Date()) > blockUntil);
-        $open_popups.value = { ...$open_popups.value, [item.id]: open };
-      }}
       trigger="hover"
       arrow={false}
+      getPopupContainer={() => document.getElementById("root") ?? document.body}
       content={
         <div
           className={cx("weg-item-preview-container", $settings.value.position.toLowerCase())}

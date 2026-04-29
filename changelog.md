@@ -2,6 +2,10 @@
 
 ## [2.6.1-dev]
 
+### fix
+
+- dock auto hide not working.
+
 ## [2.6.0]
 
 ### features

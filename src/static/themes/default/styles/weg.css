@@ -265,7 +265,7 @@
 .weg-item-preview-container {
   padding: 10px;
   border-radius: 10px;
-  background-color: var(--color-gray-100);
+  background-color: var(--color-gray-75);
 
   .weg-item-display-name {
     white-space: nowrap;

@@ -1,13 +1,10 @@
-import { computed, effect, signal } from "@preact/signals";
+import { effect, signal } from "@preact/signals";
 import { HideMode } from "@seelen-ui/lib/types";
 import { $is_this_webview_focused } from "libs/ui/react/utils/signals.ts";
 
 import { $mouse_at_edge } from "./system.ts";
 import { $settings } from "./settings.ts";
 import { $is_dock_overlapped } from "./windows.ts";
-
-export const $open_popups = signal<Record<string, boolean>>({});
-export const $there_are_open_popups = computed(() => Object.values($open_popups.value).some((v) => v));
 
 export const $dock_should_be_hidden = signal(false);
 
@@ -25,13 +22,10 @@ effect(() => {
       flush = true;
       break;
     case HideMode.Always:
-      hidden = !$is_this_webview_focused.value && !$there_are_open_popups.value && !isMouseOverEdge;
+      hidden = !$is_this_webview_focused.value && !isMouseOverEdge;
       break;
     case HideMode.OnOverlap:
-      hidden = $is_dock_overlapped.value &&
-        !$is_this_webview_focused.value &&
-        !$there_are_open_popups.value &&
-        !isMouseOverEdge;
+      hidden = $is_dock_overlapped.value && !$is_this_webview_focused.value && !isMouseOverEdge;
       break;
   }
 
