@@ -25,16 +25,27 @@ export const ALL_POWER_MENU_ACTIONS: PowerMenuAction[] = [
   "Hibernate",
 ];
 
-/** Gets the current PowerMenu configuration from settings. */
-export function getPowerMenuConfig(): PowerMenuSettings {
-  const raw = (settings.value.byWidget as any)["@seelen/power-menu"];
-  if (!raw) return DEFAULT_POWER_MENU_SETTINGS;
+/**
+ * Reads the power menu settings from a raw byWidget map.
+ * The cast to `Record<string, unknown>` is intentional: the generated TS bindings don't yet
+ * include `@seelen/power-menu` as a named key. This is the single point to update once
+ * `deno task build:rs` regenerates the types.
+ */
+function parsePowerMenuSettings(byWidget: unknown): PowerMenuSettings {
+  const raw = (byWidget as Record<string, unknown>)["@seelen/power-menu"];
+  if (!raw || typeof raw !== "object") return DEFAULT_POWER_MENU_SETTINGS;
+  const r = raw as Record<string, unknown>;
   return {
-    layout: (raw.layout as PowerMenuLayout) ?? DEFAULT_POWER_MENU_SETTINGS.layout,
-    items: Array.isArray(raw.items)
-      ? (raw.items as PowerMenuAction[])
+    layout: (r["layout"] as PowerMenuLayout) ?? DEFAULT_POWER_MENU_SETTINGS.layout,
+    items: Array.isArray(r["items"])
+      ? (r["items"] as PowerMenuAction[])
       : DEFAULT_POWER_MENU_SETTINGS.items,
   };
+}
+
+/** Gets the current PowerMenu configuration from settings. */
+export function getPowerMenuConfig(): PowerMenuSettings {
+  return parsePowerMenuSettings(settings.value.byWidget);
 }
 
 /** Patches the PowerMenu configuration. */

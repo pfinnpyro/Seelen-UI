@@ -55,5 +55,13 @@ const ALL_OPTIONS: Record<PowerMenuAction, Option> = {
 
 /** Returns the ordered list of visible options based on user configuration. */
 export function getOptions(items: PowerMenuAction[]): Option[] {
-  return items.map((action) => ALL_OPTIONS[action]).filter(Boolean);
+  return items
+    .map((action) => {
+      const option = ALL_OPTIONS[action];
+      if (!option) {
+        console.warn(`[power-menu] Unknown action "${action}" – skipping.`);
+      }
+      return option;
+    })
+    .filter((o): o is Option => o !== undefined);
 }

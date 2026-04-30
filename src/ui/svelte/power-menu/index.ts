@@ -3,15 +3,15 @@ import { mount } from "svelte";
 import App from "./app.svelte";
 import { loadTranslations } from "./i18n/index.ts";
 import { Settings, Widget } from "@seelen-ui/lib";
+import { parsePowerMenuSettings } from "./config.ts";
 
 import "@seelen-ui/lib/styles/reset.css";
 
 await loadTranslations();
 
 const settings = await Settings.getAsync();
-const rawConfig = (settings.byWidget as any)["@seelen/power-menu"];
-const layout: string = rawConfig?.layout ?? "Fullscreen";
-const isFlyout = layout === "FlyoutList" || layout === "FlyoutGrid";
+const config = parsePowerMenuSettings(settings.byWidget);
+const isFlyout = config.layout === "FlyoutList" || config.layout === "FlyoutGrid";
 
 const root = getRootContainer();
 const widget = Widget.getCurrent();

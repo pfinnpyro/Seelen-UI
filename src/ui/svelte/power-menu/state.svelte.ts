@@ -2,22 +2,13 @@ import { invoke, type Rect, SeelenCommand, SeelenEvent, Settings, subscribe, Wid
 import { locale } from "./i18n/index.ts";
 import { writable } from "svelte/store";
 import { lazyRune } from "libs/ui/svelte/utils/LazyRune.svelte.ts";
+import {
+  DEFAULT_POWER_MENU_SETTINGS,
+  parsePowerMenuSettings,
+  type PowerMenuSettings,
+} from "./config.ts";
 
-/** Mirror of the Rust PowerMenuLayout enum */
-export type PowerMenuLayout = "Fullscreen" | "FlyoutList" | "FlyoutGrid";
-
-/** Mirror of the Rust PowerMenuAction enum */
-export type PowerMenuAction = "Lock" | "LogOut" | "Shutdown" | "Restart" | "Suspend" | "Hibernate";
-
-export interface PowerMenuSettings {
-  layout: PowerMenuLayout;
-  items: PowerMenuAction[];
-}
-
-const DEFAULT_POWER_MENU_SETTINGS: PowerMenuSettings = {
-  layout: "Fullscreen",
-  items: ["Lock", "LogOut", "Shutdown", "Restart", "Suspend", "Hibernate"],
-};
+export type { PowerMenuLayout, PowerMenuAction, PowerMenuSettings } from "./config.ts";
 
 let settings = writable(await Settings.getAsync());
 Settings.onChange((s) => settings.set(s));
@@ -27,15 +18,7 @@ settings.subscribe((settings) => {
 
 let powerMenuConfig = $state<PowerMenuSettings>(DEFAULT_POWER_MENU_SETTINGS);
 settings.subscribe((s) => {
-  const raw = (s.byWidget as any)["@seelen/power-menu"];
-  if (raw && typeof raw === "object") {
-    powerMenuConfig = {
-      layout: (raw.layout as PowerMenuLayout) ?? DEFAULT_POWER_MENU_SETTINGS.layout,
-      items: Array.isArray(raw.items) ? (raw.items as PowerMenuAction[]) : DEFAULT_POWER_MENU_SETTINGS.items,
-    };
-  } else {
-    powerMenuConfig = DEFAULT_POWER_MENU_SETTINGS;
-  }
+  powerMenuConfig = parsePowerMenuSettings(s.byWidget);
 });
 
 let monitors = lazyRune(() => invoke(SeelenCommand.SystemGetMonitors));
