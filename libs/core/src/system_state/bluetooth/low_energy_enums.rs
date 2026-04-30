@@ -1,9 +1,7 @@
 // This file was generated via rust macros. Don't modify manually.
 // all this structs are based on official docs https://www.bluetooth.com/specifications/assigned-numbers
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceUnknownSubCategory {
@@ -11,9 +9,7 @@ pub enum BLEAppearanceUnknownSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearancePhoneSubCategory {
@@ -21,9 +17,7 @@ pub enum BLEAppearancePhoneSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceComputerSubCategory {
@@ -46,9 +40,7 @@ pub enum BLEAppearanceComputerSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceWatchSubCategory {
@@ -58,9 +50,7 @@ pub enum BLEAppearanceWatchSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceClockSubCategory {
@@ -68,9 +58,7 @@ pub enum BLEAppearanceClockSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceDisplaySubCategory {
@@ -78,9 +66,7 @@ pub enum BLEAppearanceDisplaySubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceRemoteControlSubCategory {
@@ -88,9 +74,7 @@ pub enum BLEAppearanceRemoteControlSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceEyeglassesSubCategory {
@@ -98,9 +82,7 @@ pub enum BLEAppearanceEyeglassesSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceTagSubCategory {
@@ -108,9 +90,7 @@ pub enum BLEAppearanceTagSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceKeyringSubCategory {
@@ -118,9 +98,7 @@ pub enum BLEAppearanceKeyringSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceMediaPlayerSubCategory {
@@ -128,9 +106,7 @@ pub enum BLEAppearanceMediaPlayerSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceBarcodeScannerSubCategory {
@@ -138,9 +114,7 @@ pub enum BLEAppearanceBarcodeScannerSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceThermometerSubCategory {
@@ -149,9 +123,7 @@ pub enum BLEAppearanceThermometerSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceHeartRateSensorSubCategory {
@@ -160,9 +132,7 @@ pub enum BLEAppearanceHeartRateSensorSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceBloodPressureSubCategory {
@@ -172,9 +142,7 @@ pub enum BLEAppearanceBloodPressureSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceHumanInterfaceDeviceSubCategory {
@@ -192,9 +160,7 @@ pub enum BLEAppearanceHumanInterfaceDeviceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceGlucoseMeterSubCategory {
@@ -202,9 +168,7 @@ pub enum BLEAppearanceGlucoseMeterSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceRunningWalkingSensorSubCategory {
@@ -215,9 +179,7 @@ pub enum BLEAppearanceRunningWalkingSensorSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceCyclingSubCategory {
@@ -230,9 +192,7 @@ pub enum BLEAppearanceCyclingSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceControlDeviceSubCategory {
@@ -253,9 +213,7 @@ pub enum BLEAppearanceControlDeviceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceNetworkDeviceSubCategory {
@@ -266,9 +224,7 @@ pub enum BLEAppearanceNetworkDeviceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceSensorSubCategory {
@@ -301,9 +257,7 @@ pub enum BLEAppearanceSensorSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceLightFixturesSubCategory {
@@ -336,9 +290,7 @@ pub enum BLEAppearanceLightFixturesSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceFanSubCategory {
@@ -352,9 +304,7 @@ pub enum BLEAppearanceFanSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceHVACSubCategory {
@@ -373,9 +323,7 @@ pub enum BLEAppearanceHVACSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceAirConditioningSubCategory {
@@ -383,9 +331,7 @@ pub enum BLEAppearanceAirConditioningSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceHumidifierSubCategory {
@@ -393,9 +339,7 @@ pub enum BLEAppearanceHumidifierSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceHeatingSubCategory {
@@ -410,9 +354,7 @@ pub enum BLEAppearanceHeatingSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceAccessControlSubCategory {
@@ -429,9 +371,7 @@ pub enum BLEAppearanceAccessControlSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceMotorizedDeviceSubCategory {
@@ -444,9 +384,7 @@ pub enum BLEAppearanceMotorizedDeviceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearancePowerDeviceSubCategory {
@@ -463,9 +401,7 @@ pub enum BLEAppearancePowerDeviceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceLightSourceSubCategory {
@@ -481,9 +417,7 @@ pub enum BLEAppearanceLightSourceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceWindowCoveringSubCategory {
@@ -497,9 +431,7 @@ pub enum BLEAppearanceWindowCoveringSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceAudioSinkSubCategory {
@@ -512,9 +444,7 @@ pub enum BLEAppearanceAudioSinkSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceAudioSourceSubCategory {
@@ -531,9 +461,7 @@ pub enum BLEAppearanceAudioSourceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceMotorizedVehicleSubCategory {
@@ -556,9 +484,7 @@ pub enum BLEAppearanceMotorizedVehicleSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceDomesticApplianceSubCategory {
@@ -581,9 +507,7 @@ pub enum BLEAppearanceDomesticApplianceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceWearableAudioDeviceSubCategory {
@@ -595,9 +519,7 @@ pub enum BLEAppearanceWearableAudioDeviceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceAircraftSubCategory {
@@ -609,9 +531,7 @@ pub enum BLEAppearanceAircraftSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceAVEquipmentSubCategory {
@@ -629,9 +549,7 @@ pub enum BLEAppearanceAVEquipmentSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceDisplayEquipmentSubCategory {
@@ -642,9 +560,7 @@ pub enum BLEAppearanceDisplayEquipmentSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceHearingaidSubCategory {
@@ -655,9 +571,7 @@ pub enum BLEAppearanceHearingaidSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceGamingSubCategory {
@@ -667,9 +581,7 @@ pub enum BLEAppearanceGamingSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceSignageSubCategory {
@@ -679,9 +591,7 @@ pub enum BLEAppearanceSignageSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearancePulseOximeterSubCategory {
@@ -691,9 +601,7 @@ pub enum BLEAppearancePulseOximeterSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceWeightScaleSubCategory {
@@ -701,9 +609,7 @@ pub enum BLEAppearanceWeightScaleSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearancePersonalMobilityDeviceSubCategory {
@@ -713,9 +619,7 @@ pub enum BLEAppearancePersonalMobilityDeviceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceContinuousGlucoseMonitorSubCategory {
@@ -723,9 +627,7 @@ pub enum BLEAppearanceContinuousGlucoseMonitorSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceInsulinPumpSubCategory {
@@ -736,9 +638,7 @@ pub enum BLEAppearanceInsulinPumpSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceMedicationDeliverySubCategory {
@@ -746,9 +646,7 @@ pub enum BLEAppearanceMedicationDeliverySubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceSpirometerSubCategory {
@@ -757,9 +655,7 @@ pub enum BLEAppearanceSpirometerSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceOutdoorSportsActivitySubCategory {
@@ -771,9 +667,7 @@ pub enum BLEAppearanceOutdoorSportsActivitySubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceIndustrialMeasurementDeviceSubCategory {
@@ -787,9 +681,7 @@ pub enum BLEAppearanceIndustrialMeasurementDeviceSubCategory {
     Reserved(u16),
 }
 
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 #[cfg_attr(feature = "gen-binds", ts(export_to = "BLEAppearanceSubCategory.ts"))]
 #[repr(u16)]
 pub enum BLEAppearanceIndustrialToolsSubCategory {
@@ -807,9 +699,7 @@ pub enum BLEAppearanceIndustrialToolsSubCategory {
 }
 
 #[repr(u16)]
-#[derive(
-    Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS,
-)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq, FromPrimitive, IntoPrimitive, Serialize, Deserialize, TS)]
 pub enum BLEAppearanceCategory {
     #[default]
     Unknown = 0x0,
@@ -933,172 +823,60 @@ impl From<u16> for BLEAppearance {
         let subcategory = value & 0b111111; // 6 bits
 
         match category {
-            BLEAppearanceCategory::Unknown => {
-                BLEAppearance::Unknown(BLEAppearanceUnknownSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::Phone => {
-                BLEAppearance::Phone(BLEAppearancePhoneSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::Computer => {
-                BLEAppearance::Computer(BLEAppearanceComputerSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::Watch => {
-                BLEAppearance::Watch(BLEAppearanceWatchSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::Clock => {
-                BLEAppearance::Clock(BLEAppearanceClockSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::Display => {
-                BLEAppearance::Display(BLEAppearanceDisplaySubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::RemoteControl => BLEAppearance::RemoteControl(
-                BLEAppearanceRemoteControlSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::Eyeglasses => {
-                BLEAppearance::Eyeglasses(BLEAppearanceEyeglassesSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::Tag => {
-                BLEAppearance::Tag(BLEAppearanceTagSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::Keyring => {
-                BLEAppearance::Keyring(BLEAppearanceKeyringSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::MediaPlayer => {
-                BLEAppearance::MediaPlayer(BLEAppearanceMediaPlayerSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::BarcodeScanner => BLEAppearance::BarcodeScanner(
-                BLEAppearanceBarcodeScannerSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::Thermometer => {
-                BLEAppearance::Thermometer(BLEAppearanceThermometerSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::HeartRateSensor => BLEAppearance::HeartRateSensor(
-                BLEAppearanceHeartRateSensorSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::BloodPressure => BLEAppearance::BloodPressure(
-                BLEAppearanceBloodPressureSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::HumanInterfaceDevice => BLEAppearance::HumanInterfaceDevice(
-                BLEAppearanceHumanInterfaceDeviceSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::GlucoseMeter => {
-                BLEAppearance::GlucoseMeter(BLEAppearanceGlucoseMeterSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::RunningWalkingSensor => BLEAppearance::RunningWalkingSensor(
-                BLEAppearanceRunningWalkingSensorSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::Cycling => {
-                BLEAppearance::Cycling(BLEAppearanceCyclingSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::ControlDevice => BLEAppearance::ControlDevice(
-                BLEAppearanceControlDeviceSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::NetworkDevice => BLEAppearance::NetworkDevice(
-                BLEAppearanceNetworkDeviceSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::Sensor => {
-                BLEAppearance::Sensor(BLEAppearanceSensorSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::LightFixtures => BLEAppearance::LightFixtures(
-                BLEAppearanceLightFixturesSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::Fan => {
-                BLEAppearance::Fan(BLEAppearanceFanSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::HVAC => {
-                BLEAppearance::HVAC(BLEAppearanceHVACSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::AirConditioning => BLEAppearance::AirConditioning(
-                BLEAppearanceAirConditioningSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::Humidifier => {
-                BLEAppearance::Humidifier(BLEAppearanceHumidifierSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::Heating => {
-                BLEAppearance::Heating(BLEAppearanceHeatingSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::AccessControl => BLEAppearance::AccessControl(
-                BLEAppearanceAccessControlSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::MotorizedDevice => BLEAppearance::MotorizedDevice(
-                BLEAppearanceMotorizedDeviceSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::PowerDevice => {
-                BLEAppearance::PowerDevice(BLEAppearancePowerDeviceSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::LightSource => {
-                BLEAppearance::LightSource(BLEAppearanceLightSourceSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::WindowCovering => BLEAppearance::WindowCovering(
-                BLEAppearanceWindowCoveringSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::AudioSink => {
-                BLEAppearance::AudioSink(BLEAppearanceAudioSinkSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::AudioSource => {
-                BLEAppearance::AudioSource(BLEAppearanceAudioSourceSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::MotorizedVehicle => BLEAppearance::MotorizedVehicle(
-                BLEAppearanceMotorizedVehicleSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::DomesticAppliance => BLEAppearance::DomesticAppliance(
-                BLEAppearanceDomesticApplianceSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::WearableAudioDevice => BLEAppearance::WearableAudioDevice(
-                BLEAppearanceWearableAudioDeviceSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::Aircraft => {
-                BLEAppearance::Aircraft(BLEAppearanceAircraftSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::AVEquipment => {
-                BLEAppearance::AVEquipment(BLEAppearanceAVEquipmentSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::DisplayEquipment => BLEAppearance::DisplayEquipment(
-                BLEAppearanceDisplayEquipmentSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::Hearingaid => {
-                BLEAppearance::Hearingaid(BLEAppearanceHearingaidSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::Gaming => {
-                BLEAppearance::Gaming(BLEAppearanceGamingSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::Signage => {
-                BLEAppearance::Signage(BLEAppearanceSignageSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::PulseOximeter => BLEAppearance::PulseOximeter(
-                BLEAppearancePulseOximeterSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::WeightScale => {
-                BLEAppearance::WeightScale(BLEAppearanceWeightScaleSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::PersonalMobilityDevice => BLEAppearance::PersonalMobilityDevice(
-                BLEAppearancePersonalMobilityDeviceSubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::ContinuousGlucoseMonitor => {
-                BLEAppearance::ContinuousGlucoseMonitor(
-                    BLEAppearanceContinuousGlucoseMonitorSubCategory::from(subcategory),
-                )
-            }
-            BLEAppearanceCategory::InsulinPump => {
-                BLEAppearance::InsulinPump(BLEAppearanceInsulinPumpSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::MedicationDelivery => BLEAppearance::MedicationDelivery(
-                BLEAppearanceMedicationDeliverySubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::Spirometer => {
-                BLEAppearance::Spirometer(BLEAppearanceSpirometerSubCategory::from(subcategory))
-            }
-            BLEAppearanceCategory::OutdoorSportsActivity => BLEAppearance::OutdoorSportsActivity(
-                BLEAppearanceOutdoorSportsActivitySubCategory::from(subcategory),
-            ),
-            BLEAppearanceCategory::IndustrialMeasurementDevice => {
-                BLEAppearance::IndustrialMeasurementDevice(
-                    BLEAppearanceIndustrialMeasurementDeviceSubCategory::from(subcategory),
-                )
-            }
-            BLEAppearanceCategory::IndustrialTools => BLEAppearance::IndustrialTools(
-                BLEAppearanceIndustrialToolsSubCategory::from(subcategory),
-            ),
+            BLEAppearanceCategory::Unknown => BLEAppearance::Unknown(BLEAppearanceUnknownSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Phone => BLEAppearance::Phone(BLEAppearancePhoneSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Computer => BLEAppearance::Computer(BLEAppearanceComputerSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Watch => BLEAppearance::Watch(BLEAppearanceWatchSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Clock => BLEAppearance::Clock(BLEAppearanceClockSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Display => BLEAppearance::Display(BLEAppearanceDisplaySubCategory::from(subcategory)),
+            BLEAppearanceCategory::RemoteControl => BLEAppearance::RemoteControl(BLEAppearanceRemoteControlSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Eyeglasses => BLEAppearance::Eyeglasses(BLEAppearanceEyeglassesSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Tag => BLEAppearance::Tag(BLEAppearanceTagSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Keyring => BLEAppearance::Keyring(BLEAppearanceKeyringSubCategory::from(subcategory)),
+            BLEAppearanceCategory::MediaPlayer => BLEAppearance::MediaPlayer(BLEAppearanceMediaPlayerSubCategory::from(subcategory)),
+            BLEAppearanceCategory::BarcodeScanner => BLEAppearance::BarcodeScanner(BLEAppearanceBarcodeScannerSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Thermometer => BLEAppearance::Thermometer(BLEAppearanceThermometerSubCategory::from(subcategory)),
+            BLEAppearanceCategory::HeartRateSensor => BLEAppearance::HeartRateSensor(BLEAppearanceHeartRateSensorSubCategory::from(subcategory)),
+            BLEAppearanceCategory::BloodPressure => BLEAppearance::BloodPressure(BLEAppearanceBloodPressureSubCategory::from(subcategory)),
+            BLEAppearanceCategory::HumanInterfaceDevice => BLEAppearance::HumanInterfaceDevice(BLEAppearanceHumanInterfaceDeviceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::GlucoseMeter => BLEAppearance::GlucoseMeter(BLEAppearanceGlucoseMeterSubCategory::from(subcategory)),
+            BLEAppearanceCategory::RunningWalkingSensor => BLEAppearance::RunningWalkingSensor(BLEAppearanceRunningWalkingSensorSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Cycling => BLEAppearance::Cycling(BLEAppearanceCyclingSubCategory::from(subcategory)),
+            BLEAppearanceCategory::ControlDevice => BLEAppearance::ControlDevice(BLEAppearanceControlDeviceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::NetworkDevice => BLEAppearance::NetworkDevice(BLEAppearanceNetworkDeviceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Sensor => BLEAppearance::Sensor(BLEAppearanceSensorSubCategory::from(subcategory)),
+            BLEAppearanceCategory::LightFixtures => BLEAppearance::LightFixtures(BLEAppearanceLightFixturesSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Fan => BLEAppearance::Fan(BLEAppearanceFanSubCategory::from(subcategory)),
+            BLEAppearanceCategory::HVAC => BLEAppearance::HVAC(BLEAppearanceHVACSubCategory::from(subcategory)),
+            BLEAppearanceCategory::AirConditioning => BLEAppearance::AirConditioning(BLEAppearanceAirConditioningSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Humidifier => BLEAppearance::Humidifier(BLEAppearanceHumidifierSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Heating => BLEAppearance::Heating(BLEAppearanceHeatingSubCategory::from(subcategory)),
+            BLEAppearanceCategory::AccessControl => BLEAppearance::AccessControl(BLEAppearanceAccessControlSubCategory::from(subcategory)),
+            BLEAppearanceCategory::MotorizedDevice => BLEAppearance::MotorizedDevice(BLEAppearanceMotorizedDeviceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::PowerDevice => BLEAppearance::PowerDevice(BLEAppearancePowerDeviceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::LightSource => BLEAppearance::LightSource(BLEAppearanceLightSourceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::WindowCovering => BLEAppearance::WindowCovering(BLEAppearanceWindowCoveringSubCategory::from(subcategory)),
+            BLEAppearanceCategory::AudioSink => BLEAppearance::AudioSink(BLEAppearanceAudioSinkSubCategory::from(subcategory)),
+            BLEAppearanceCategory::AudioSource => BLEAppearance::AudioSource(BLEAppearanceAudioSourceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::MotorizedVehicle => BLEAppearance::MotorizedVehicle(BLEAppearanceMotorizedVehicleSubCategory::from(subcategory)),
+            BLEAppearanceCategory::DomesticAppliance => BLEAppearance::DomesticAppliance(BLEAppearanceDomesticApplianceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::WearableAudioDevice => BLEAppearance::WearableAudioDevice(BLEAppearanceWearableAudioDeviceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Aircraft => BLEAppearance::Aircraft(BLEAppearanceAircraftSubCategory::from(subcategory)),
+            BLEAppearanceCategory::AVEquipment => BLEAppearance::AVEquipment(BLEAppearanceAVEquipmentSubCategory::from(subcategory)),
+            BLEAppearanceCategory::DisplayEquipment => BLEAppearance::DisplayEquipment(BLEAppearanceDisplayEquipmentSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Hearingaid => BLEAppearance::Hearingaid(BLEAppearanceHearingaidSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Gaming => BLEAppearance::Gaming(BLEAppearanceGamingSubCategory::from(subcategory)),
+            BLEAppearanceCategory::Signage => BLEAppearance::Signage(BLEAppearanceSignageSubCategory::from(subcategory)),
+            BLEAppearanceCategory::PulseOximeter => BLEAppearance::PulseOximeter(BLEAppearancePulseOximeterSubCategory::from(subcategory)),
+            BLEAppearanceCategory::WeightScale => BLEAppearance::WeightScale(BLEAppearanceWeightScaleSubCategory::from(subcategory)),
+            BLEAppearanceCategory::PersonalMobilityDevice => BLEAppearance::PersonalMobilityDevice(BLEAppearancePersonalMobilityDeviceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::ContinuousGlucoseMonitor => BLEAppearance::ContinuousGlucoseMonitor(BLEAppearanceContinuousGlucoseMonitorSubCategory::from(subcategory)),
+            BLEAppearanceCategory::InsulinPump => BLEAppearance::InsulinPump(BLEAppearanceInsulinPumpSubCategory::from(subcategory)),
+            BLEAppearanceCategory::MedicationDelivery => BLEAppearance::MedicationDelivery(BLEAppearanceMedicationDeliverySubCategory::from(subcategory)),
+            BLEAppearanceCategory::Spirometer => BLEAppearance::Spirometer(BLEAppearanceSpirometerSubCategory::from(subcategory)),
+            BLEAppearanceCategory::OutdoorSportsActivity => BLEAppearance::OutdoorSportsActivity(BLEAppearanceOutdoorSportsActivitySubCategory::from(subcategory)),
+            BLEAppearanceCategory::IndustrialMeasurementDevice => BLEAppearance::IndustrialMeasurementDevice(BLEAppearanceIndustrialMeasurementDeviceSubCategory::from(subcategory)),
+            BLEAppearanceCategory::IndustrialTools => BLEAppearance::IndustrialTools(BLEAppearanceIndustrialToolsSubCategory::from(subcategory)),
         }
     }
 }

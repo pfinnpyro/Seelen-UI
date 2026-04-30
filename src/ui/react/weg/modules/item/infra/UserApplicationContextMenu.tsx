@@ -1,5 +1,6 @@
 import { invoke, SeelenCommand, Widget } from "@seelen-ui/lib";
 import type { ContextMenu, ContextMenuItem, UserAppWindow } from "@seelen-ui/lib/types";
+import type { JumpListItem, JumpListSection } from "@seelen-ui/lib/types";
 import type { TFunction } from "i18next";
 
 import type { AppOrFileWegItem } from "../../shared/types.ts";
@@ -9,6 +10,7 @@ import { $full_settings, $settings } from "../../shared/state/settings.ts";
 
 const identifier = crypto.randomUUID();
 const onAppMenuClick = "weg::app_menu_click";
+const onJumpListItemClick = "weg::jump_list_item_click";
 
 let pendingAppItem: AppOrFileWegItem | null = null;
 let pendingAppWindows: UserAppWindow[] = [];
@@ -46,15 +48,71 @@ Widget.self.webview.listen(onAppMenuClick, ({ payload }) => {
   }
 });
 
-export function getUserApplicationContextMenu(
+Widget.self.webview.listen(onJumpListItemClick, ({ payload }) => {
+  const { value } = payload as { value: JumpListItem | null };
+  if (!value?.path) return;
+  invoke(SeelenCommand.Run, {
+    program: value.path,
+    args: value.args,
+    workingDir: value.workingDir,
+    elevated: false,
+  });
+});
+
+function jumpListSectionsToMenuItems(sections: JumpListSection[]): ContextMenuItem[] {
+  if (!sections.length) return [];
+
+  const menuItems: ContextMenuItem[] = [];
+
+  for (const section of sections) {
+    const sectionItems: ContextMenuItem[] = section.items.map((jItem) => ({
+      type: "Item" as const,
+      key: "jump_list_item",
+      label: jItem.title,
+      callbackEvent: onJumpListItemClick,
+      value: jItem,
+    }));
+
+    if (!sectionItems.length) continue;
+
+    if (section.name) {
+      // Named sections (e.g. "Recent") become submenus.
+      menuItems.push({
+        type: "Submenu",
+        identifier: crypto.randomUUID(),
+        label: section.name,
+        items: sectionItems,
+      });
+    } else {
+      // The unnamed Tasks section: items appear inline.
+      menuItems.push(...sectionItems);
+    }
+  }
+
+  return menuItems;
+}
+
+export async function getUserApplicationContextMenu(
   t: TFunction,
   item: AppOrFileWegItem,
   windows: UserAppWindow[],
-): ContextMenu {
+): Promise<ContextMenu> {
   pendingAppItem = item;
   pendingAppWindows = windows;
 
   const items: ContextMenuItem[] = [];
+
+  // Prepend jump list sections (tasks + recent items) if available.
+  const jumpListSections = await invoke(SeelenCommand.WegGetJumpList, {
+    umid: item.umid,
+    path: item.path,
+  }).catch(() => [] as JumpListSection[]);
+
+  const jumpListItems = jumpListSectionsToMenuItems(jumpListSections);
+  if (jumpListItems.length) {
+    items.push(...jumpListItems);
+    items.push({ type: "Separator" });
+  }
 
   if (!item.preventPinning) {
     if (item.pinned) {
