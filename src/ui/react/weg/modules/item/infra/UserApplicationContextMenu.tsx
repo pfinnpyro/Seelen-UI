@@ -65,9 +65,9 @@ function jumpListSectionsToMenuItems(sections: JumpListSection[]): ContextMenuIt
   const menuItems: ContextMenuItem[] = [];
 
   for (const section of sections) {
-    const sectionItems: ContextMenuItem[] = section.items.map((jItem) => ({
+    const sectionItems: ContextMenuItem[] = section.items.map((jItem, index) => ({
       type: "Item" as const,
-      key: "jump_list_item",
+      key: `jump_list_item_${index}`,
       label: jItem.title,
       callbackEvent: onJumpListItemClick,
       value: jItem,
@@ -106,7 +106,10 @@ export async function getUserApplicationContextMenu(
   const jumpListSections = await invoke(SeelenCommand.WegGetJumpList, {
     umid: item.umid,
     path: item.path,
-  }).catch(() => [] as JumpListSection[]);
+  }).catch((err: unknown) => {
+    console.error("WegGetJumpList failed:", err);
+    return [] as JumpListSection[];
+  });
 
   const jumpListItems = jumpListSectionsToMenuItems(jumpListSections);
   if (jumpListItems.length) {
