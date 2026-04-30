@@ -27,6 +27,7 @@ import { SeelenWegSettings } from "../../seelenweg/infra.tsx";
 import { WindowManagerSettings } from "../../WindowManager/main/infra/index.tsx";
 import { FancyToolbarSettings } from "../../fancyToolbar/infra.tsx";
 import { WallSettings } from "../../Wall/infra.tsx";
+import { PowerMenuSettings } from "../../powerMenu/infra.tsx";
 import { Icon } from "libs/ui/react/components/Icon/index.tsx";
 
 export function WidgetConfiguration({
@@ -184,6 +185,10 @@ export function WidgetView() {
 
   if (widgetId === "@seelen/wallpaper-manager") {
     return <WallSettings />;
+  }
+
+  if (widgetId === "@seelen/power-menu") {
+    return <PowerMenuSettings />;
   }
 
   return <WidgetConfiguration widgetId={widgetId} />;

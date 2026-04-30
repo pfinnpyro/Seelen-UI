@@ -388,6 +388,65 @@ impl Default for SeelenWallSettings {
     }
 }
 
+// ========================== Power Menu Settings ==============================
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
+#[ts(repr(enum = name))]
+pub enum PowerMenuLayout {
+    /// Full-screen overlay (default, original behaviour)
+    Fullscreen,
+    /// Compact flyout with a vertical list of items
+    FlyoutList,
+    /// Compact flyout with a small grid of items
+    FlyoutGrid,
+}
+
+impl Default for PowerMenuLayout {
+    fn default() -> Self {
+        Self::Fullscreen
+    }
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]
+#[ts(repr(enum = name))]
+pub enum PowerMenuAction {
+    Lock,
+    LogOut,
+    Shutdown,
+    Restart,
+    Suspend,
+    Hibernate,
+}
+
+fn default_power_menu_items() -> Vec<PowerMenuAction> {
+    vec![
+        PowerMenuAction::Lock,
+        PowerMenuAction::LogOut,
+        PowerMenuAction::Shutdown,
+        PowerMenuAction::Restart,
+        PowerMenuAction::Suspend,
+        PowerMenuAction::Hibernate,
+    ]
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema, TS)]
+#[serde(default, rename_all = "camelCase")]
+pub struct PowerMenuSettings {
+    /// Which layout variant to use
+    pub layout: PowerMenuLayout,
+    /// Ordered list of visible power actions
+    pub items: Vec<PowerMenuAction>,
+}
+
+impl Default for PowerMenuSettings {
+    fn default() -> Self {
+        Self {
+            layout: PowerMenuLayout::default(),
+            items: default_power_menu_items(),
+        }
+    }
+}
+
 // ========================== Seelen Updates ==============================
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, JsonSchema, TS)]

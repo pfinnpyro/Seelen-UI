@@ -319,6 +319,16 @@ wall:
   wallpapers_and_collections: Wallpapers & Collections
   withOverlay: With Overlay
   workspace_collections: Workspace Collections
+power_menu:
+  layout: Layout
+  items: Visible Items (drag to reorder)
+  actions:
+    lock: Lock session
+    logout: Log out
+    shutdown: Power off
+    restart: Reboot
+    suspend: Suspend
+    hibernate: Hibernate
 weg:
   auto_hide: Auto Hide
   delay_to_hide: Delay to hide

@@ -5,7 +5,10 @@ use uuid::Uuid;
 
 use crate::{resource::WidgetId, utils::TsUnknown};
 
-use super::{FancyToolbarSettings, SeelenWallSettings, SeelenWegSettings, WindowManagerSettings};
+use super::{
+    FancyToolbarSettings, PowerMenuSettings, SeelenWallSettings, SeelenWegSettings,
+    WindowManagerSettings,
+};
 
 #[derive(Clone, Debug, Default, Serialize, Deserialize, JsonSchema, TS)]
 #[serde(default)]
@@ -18,6 +21,8 @@ pub struct SettingsByWidget {
     pub wm: WindowManagerSettings,
     #[serde(rename = "@seelen/wallpaper-manager")]
     pub wall: SeelenWallSettings,
+    #[serde(rename = "@seelen/power-menu")]
+    pub power_menu: PowerMenuSettings,
     #[serde(flatten)]
     pub others: HashMap<WidgetId, ThirdPartyWidgetSettings>,
 }
