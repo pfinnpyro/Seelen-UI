@@ -2,6 +2,7 @@ pub mod cli;
 pub mod handler;
 pub mod hook;
 pub mod instance;
+pub mod jump_list;
 
 pub use instance::SeelenWeg;
 

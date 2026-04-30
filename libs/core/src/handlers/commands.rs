@@ -226,6 +226,12 @@ slu_commands_declaration! {
     WegKillApp = weg_kill_app(hwnd: isize),
     WegToggleWindowState = weg_toggle_window_state(hwnd: isize, was_focused: bool),
     WegPinItem = weg_pin_item(path: PathBuf),
+    WegGetJumpList = weg_get_jump_list(
+        #[ts(optional = nullable)]
+        umid: Option<String>,
+        #[ts(optional = nullable)]
+        path: Option<PathBuf>
+    ) -> Vec<JumpListSection>,
 
     // Windows Manager
     WmGetRenderTree = wm_get_render_tree() -> WmRenderTree,

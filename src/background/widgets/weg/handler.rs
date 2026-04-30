@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use seelen_core::{handlers::SeelenEvent, state::WegItemData};
+use seelen_core::{handlers::SeelenEvent, state::WegItemData, system_state::JumpListSection};
 use tauri_plugin_shell::ShellExt;
 
 use crate::{
@@ -9,6 +9,8 @@ use crate::{
     windows_api::{window::Window, WindowsApi},
 };
 use windows::Win32::UI::WindowsAndMessaging::{SW_SHOWMINNOACTIVE, WM_CLOSE};
+
+use super::jump_list;
 
 #[tauri::command(async)]
 pub fn weg_close_app(hwnd: isize) -> Result<()> {
@@ -69,4 +71,12 @@ pub fn weg_pin_item(path: PathBuf) -> Result<()> {
 
     emit_to_webviews(SeelenEvent::WegAddItem, &item);
     Ok(())
+}
+
+#[tauri::command(async)]
+pub fn weg_get_jump_list(
+    umid: Option<String>,
+    path: Option<PathBuf>,
+) -> Result<Vec<JumpListSection>> {
+    jump_list::get_jump_list(umid.as_deref(), path.as_deref())
 }

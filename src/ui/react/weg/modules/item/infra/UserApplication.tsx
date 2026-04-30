@@ -46,11 +46,12 @@ function UserApplicationItem({ item, isOverlay, windows }: InnerProps) {
   };
 
   const onContextMenu = useCallback(
-    (e: MouseEvent) => {
+    async (e: MouseEvent) => {
       e.stopPropagation();
       const { alignX, alignY } = getDockContextMenuAlignment($settings.value.position);
+      const menu = await getUserApplicationContextMenu(t, item, windows);
       invoke(SeelenCommand.TriggerContextMenu, {
-        menu: { ...getUserApplicationContextMenu(t, item, windows), alignX, alignY },
+        menu: { ...menu, alignX, alignY },
         forwardTo: null,
       });
     },
