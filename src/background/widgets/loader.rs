@@ -172,6 +172,10 @@ impl WidgetPod {
     }
 
     pub fn soft_restart(&mut self) {
+        if self.window.is_none() {
+            // Pod was never started; leave it in Pending so run() can initialize it.
+            return;
+        }
         self.set_status(WidgetStatus::Restarting);
         if let Some(window) = &self.window {
             window.reload();
@@ -200,6 +204,9 @@ impl WidgetPod {
                 WIDGET_MANAGER.deployments.get(&label.widget_id, |deploy| {
                     deploy.kill_pod(&label);
                     deploy.reconcile();
+                    if !deploy.definition.lazy {
+                        deploy.start_all_webviews();
+                    }
                 });
             }
         });

@@ -2,6 +2,10 @@
 
 ## [2.6.2-dev]
 
+### fix
+
+- popups widgets not working after session resumed (sleep/wake up).
+
 ## [2.6.1]
 
 ### fix
